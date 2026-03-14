@@ -1,4 +1,14 @@
-## Hi there 👋
+<video id="camera" autoplay></video>
+
+<script>
+navigator.mediaDevices.getUserMedia({ video: true })
+.then(stream => {
+  document.getElementById("camera").srcObject = stream;
+})
+.catch(err => {
+  console.log("Camera permission denied");
+});
+</script>
 
 <!--
 **youss66ef-alt/youss66ef-alt** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
